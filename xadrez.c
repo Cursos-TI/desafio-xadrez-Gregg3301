@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
@@ -7,6 +8,53 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    char piece[10];
+    char direction1[10], direction2[10];
+    int position;
+
+    int option;
+
+    do
+    {
+        printf("=== Bem-vindo à demonstração de movimentação de peças do jogo de xadrez. ===\nEscolha qual peça deseja ver a demonstração.\n");
+        printf("1 -> Bisbo\n");
+        printf("2 -> Rainha\n");
+        printf("3 -> Torre\n");
+        printf("0 -> Sair do programa\n");
+        printf("Opcao: ");
+        scanf("%d", &option);
+
+        switch (option)
+        {
+        case 1:
+            strcpy(piece, "Bispo");
+            strcpy(direction1, "Cima");
+            strcpy(direction2, "Direita");
+            position = 5;
+
+            printf("Você escolheu o %s!\nMovendo\n", piece);
+
+            for (int i = 0; i <= position; i++)
+            {
+                printf("%s \n%s \n", direction1, direction2);
+            }
+
+            break;
+        case 2:
+            /* code */
+            break;
+        case 3:
+            /* code */
+            break;
+        
+        default:
+            break;
+        }
+    } while (option != 0);
+    
+    
+    
+    
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
